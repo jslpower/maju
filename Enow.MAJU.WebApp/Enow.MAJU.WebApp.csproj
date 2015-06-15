@@ -1,0 +1,889 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B3FCF2A8-BD7A-4BB5-A76C-F4CBA08E185B}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Enow.MAJU.WebApp</RootNamespace>
+    <AssemblyName>Enow.MAJU.WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NetDimension.Weibo">
+      <HintPath>..\Enow.MAJU.Document\DLL\NetDimension.Weibo.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Enow.MAJU.Document\DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\GetVerCode.ashx.cs">
+      <DependentUpon>GetVerCode.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\GetWxProvinceAndCity.ashx.cs">
+      <DependentUpon>GetWxProvinceAndCity.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\Handler.ashx.cs">
+      <DependentUpon>Handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\uploadImgCode.ashx.cs">
+      <DependentUpon>uploadImgCode.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoXian.aspx.cs">
+      <DependentUpon>BaoXian.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoXian.aspx.designer.cs">
+      <DependentUpon>BaoXian.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoXianConsult.aspx.cs">
+      <DependentUpon>BaoXianConsult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoXianConsult.aspx.designer.cs">
+      <DependentUpon>BaoXianConsult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="baoxiandetail.aspx.cs">
+      <DependentUpon>baoxiandetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="baoxiandetail.aspx.designer.cs">
+      <DependentUpon>baoxiandetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collect.aspx.cs">
+      <DependentUpon>Collect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collect.aspx.designer.cs">
+      <DependentUpon>Collect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\ajaxBaoXian.aspx.cs">
+      <DependentUpon>ajaxBaoXian.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\ajaxBaoXian.aspx.designer.cs">
+      <DependentUpon>ajaxBaoXian.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\ajaxInsuranceInterview.aspx.cs">
+      <DependentUpon>ajaxInsuranceInterview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\ajaxInsuranceInterview.aspx.designer.cs">
+      <DependentUpon>ajaxInsuranceInterview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\ajaxMyfangan.aspx.cs">
+      <DependentUpon>ajaxMyfangan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\ajaxMyfangan.aspx.designer.cs">
+      <DependentUpon>ajaxMyfangan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\ajaxNewsList.aspx.cs">
+      <DependentUpon>ajaxNewsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\ajaxNewsList.aspx.designer.cs">
+      <DependentUpon>ajaxNewsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\ajaxSysMessage.aspx.cs">
+      <DependentUpon>ajaxSysMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\ajaxSysMessage.aspx.designer.cs">
+      <DependentUpon>ajaxSysMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\ajaxTopicList.aspx.cs">
+      <DependentUpon>ajaxTopicList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\ajaxTopicList.aspx.designer.cs">
+      <DependentUpon>ajaxTopicList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fangan.aspx.cs">
+      <DependentUpon>fangan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fangan.aspx.designer.cs">
+      <DependentUpon>fangan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fanganDetail.aspx.cs">
+      <DependentUpon>fanganDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fanganDetail.aspx.designer.cs">
+      <DependentUpon>fanganDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HuaTi.aspx.cs">
+      <DependentUpon>HuaTi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HuaTi.aspx.designer.cs">
+      <DependentUpon>HuaTi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="huatidetail.aspx.cs">
+      <DependentUpon>huatidetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="huatidetail.aspx.designer.cs">
+      <DependentUpon>huatidetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="huatilist.aspx.cs">
+      <DependentUpon>huatilist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="huatilist.aspx.designer.cs">
+      <DependentUpon>huatilist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="huatireplay.aspx.cs">
+      <DependentUpon>huatireplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="huatireplay.aspx.designer.cs">
+      <DependentUpon>huatireplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsuranceConsult.aspx.cs">
+      <DependentUpon>InsuranceConsult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsuranceConsult.aspx.designer.cs">
+      <DependentUpon>InsuranceConsult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsuranceInterview.aspx.cs">
+      <DependentUpon>InsuranceInterview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsuranceInterview.aspx.designer.cs">
+      <DependentUpon>InsuranceInterview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsuranceInterviewDetail.aspx.cs">
+      <DependentUpon>InsuranceInterviewDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsuranceInterviewDetail.aspx.designer.cs">
+      <DependentUpon>InsuranceInterviewDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsuranceReply.aspx.cs">
+      <DependentUpon>InsuranceReply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsuranceReply.aspx.designer.cs">
+      <DependentUpon>InsuranceReply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kehufw.aspx.cs">
+      <DependentUpon>kehufw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kehufw.aspx.designer.cs">
+      <DependentUpon>kehufw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\WebApp.Master.cs">
+      <DependentUpon>WebApp.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\WebApp.Master.designer.cs">
+      <DependentUpon>WebApp.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MessageCenter.aspx.cs">
+      <DependentUpon>MessageCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MessageCenter.aspx.designer.cs">
+      <DependentUpon>MessageCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="more.aspx.cs">
+      <DependentUpon>more.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="more.aspx.designer.cs">
+      <DependentUpon>more.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyCollect.aspx.cs">
+      <DependentUpon>MyCollect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyCollect.aspx.designer.cs">
+      <DependentUpon>MyCollect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myfangan.aspx.cs">
+      <DependentUpon>myfangan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myfangan.aspx.designer.cs">
+      <DependentUpon>myfangan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myfanganno.aspx.cs">
+      <DependentUpon>myfanganno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myfanganno.aspx.designer.cs">
+      <DependentUpon>myfanganno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsDetail.aspx.cs">
+      <DependentUpon>NewsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsDetail.aspx.designer.cs">
+      <DependentUpon>NewsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsList.aspx.cs">
+      <DependentUpon>NewsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsList.aspx.designer.cs">
+      <DependentUpon>NewsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Newsreply.aspx.cs">
+      <DependentUpon>Newsreply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Newsreply.aspx.designer.cs">
+      <DependentUpon>Newsreply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="qqlogin.aspx.cs">
+      <DependentUpon>qqlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="qqlogin.aspx.designer.cs">
+      <DependentUpon>qqlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RelatedFile.aspx.cs">
+      <DependentUpon>RelatedFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatedFile.aspx.designer.cs">
+      <DependentUpon>RelatedFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="shezhi.aspx.cs">
+      <DependentUpon>shezhi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shezhi.aspx.designer.cs">
+      <DependentUpon>shezhi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysMessage.aspx.cs">
+      <DependentUpon>SysMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysMessage.aspx.designer.cs">
+      <DependentUpon>SysMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysMessageList.aspx.cs">
+      <DependentUpon>SysMessageList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysMessageList.aspx.designer.cs">
+      <DependentUpon>SysMessageList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysMessageReply.aspx.cs">
+      <DependentUpon>SysMessageReply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysMessageReply.aspx.designer.cs">
+      <DependentUpon>SysMessageReply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Weibo.aspx.cs">
+      <DependentUpon>Weibo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Weibo.aspx.designer.cs">
+      <DependentUpon>Weibo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Weibologin.aspx.cs">
+      <DependentUpon>Weibologin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Weibologin.aspx.designer.cs">
+      <DependentUpon>Weibologin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YouDian.aspx.cs">
+      <DependentUpon>YouDian.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YouDian.aspx.designer.cs">
+      <DependentUpon>YouDian.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zhitongche.aspx.cs">
+      <DependentUpon>zhitongche.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zhitongche.aspx.designer.cs">
+      <DependentUpon>zhitongche.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ziliao.aspx.cs">
+      <DependentUpon>ziliao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ziliao.aspx.designer.cs">
+      <DependentUpon>ziliao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zixun.aspx.cs">
+      <DependentUpon>zixun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zixun.aspx.designer.cs">
+      <DependentUpon>zixun.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about.aspx" />
+    <Content Include="BaoXian.aspx" />
+    <Content Include="BaoXianConsult.aspx" />
+    <Content Include="baoxiandetail.aspx" />
+    <Content Include="Collect.aspx" />
+    <Content Include="CommonPage\ajaxBaoXian.aspx" />
+    <Content Include="CommonPage\ajaxInsuranceInterview.aspx" />
+    <Content Include="CommonPage\ajaxMyfangan.aspx" />
+    <Content Include="CommonPage\ajaxNewsList.aspx" />
+    <Content Include="CommonPage\ajaxSysMessage.aspx" />
+    <Content Include="CommonPage\ajaxTopicList.aspx" />
+    <Content Include="css\basic.css" />
+    <Content Include="css\home.css" />
+    <Content Include="css\huati.css" />
+    <Content Include="css\ISrcoll\pull-icon%402x.png" />
+    <Content Include="css\ISrcoll\scrollbar.css" />
+    <Content Include="css\kehu.css" />
+    <Content Include="css\mobiscroll\mobiscroll.android-2.5.1.css" />
+    <Content Include="css\mobiscroll\mobiscroll.android-ics-2.5.2.css" />
+    <Content Include="css\mobiscroll\mobiscroll.animation-2.5.2.css" />
+    <Content Include="css\mobiscroll\mobiscroll.core-2.5.2.css" />
+    <Content Include="css\mobiscroll\mobiscroll.custom-2.14.4.min.css" />
+    <Content Include="css\mobiscroll\mobiscroll.custom-2.5.2.min.css" />
+    <Content Include="css\mobiscroll\mobiscroll.ios-2.5.1.css" />
+    <Content Include="css\mobiscroll\mobiscroll.jqm-2.5.1.css" />
+    <Content Include="css\mobiscroll\mobiscroll.sense-ui-2.5.1.css" />
+    <Content Include="css\mobiscroll\mobiscroll.wp-2.5.2.css" />
+    <Content Include="css\mobiscroll\wp_icons.png" />
+    <Content Include="css\mobiscroll\wp_icons_light.png" />
+    <Content Include="css\user.css" />
+    <Content Include="css\xiaoxi.css" />
+    <Content Include="css\zixun.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="fangan.aspx" />
+    <Content Include="fanganDetail.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="HuaTi.aspx" />
+    <Content Include="huatidetail.aspx" />
+    <Content Include="huatilist.aspx" />
+    <Content Include="huatireplay.aspx" />
+    <Content Include="images\about.png" />
+    <Content Include="images\pull-icon%402x.png" />
+    <Content Include="images\skyblue_logo_sinaweibo.png" />
+    <Content Include="images\skyblue_logo_sinaweibo_checked.png" />
+    <Content Include="images\skyblue_logo_wechat.png" />
+    <Content Include="images\skyblue_logo_wechatmoments.png" />
+    <Content Include="images\skyblue_logo_wechatmoments_checked.png" />
+    <Content Include="images\skyblue_logo_wechat_checked.png" />
+    <Content Include="images\touxian48.png" />
+    <Content Include="images\touxian72.png" />
+    <Content Include="images\xx_head1.png" />
+    <Content Include="InsuranceInterview.aspx" />
+    <Content Include="InsuranceInterviewDetail.aspx" />
+    <Content Include="InsuranceReply.aspx" />
+    <Content Include="js\CitySelect.js" />
+    <Content Include="cordova.js" />
+    <Content Include="cordova_plugins.js" />
+    <Content Include="js\enow.core.js" />
+    <Content Include="js\images\ajax-loader.gif" />
+    <Content Include="images\fxk.png" />
+    <Content Include="js\images\icons-png\action-black.png" />
+    <Content Include="js\images\icons-png\action-white.png" />
+    <Content Include="js\images\icons-png\alert-black.png" />
+    <Content Include="js\images\icons-png\alert-white.png" />
+    <Content Include="js\images\icons-png\arrow-d-black.png" />
+    <Content Include="js\images\icons-png\arrow-d-l-black.png" />
+    <Content Include="js\images\icons-png\arrow-d-l-white.png" />
+    <Content Include="js\images\icons-png\arrow-d-r-black.png" />
+    <Content Include="js\images\icons-png\arrow-d-r-white.png" />
+    <Content Include="js\images\icons-png\arrow-d-white.png" />
+    <Content Include="js\images\icons-png\arrow-l-black.png" />
+    <Content Include="js\images\icons-png\arrow-l-white.png" />
+    <Content Include="js\images\icons-png\arrow-r-black.png" />
+    <Content Include="js\images\icons-png\arrow-r-white.png" />
+    <Content Include="js\images\icons-png\arrow-u-black.png" />
+    <Content Include="js\images\icons-png\arrow-u-l-black.png" />
+    <Content Include="js\images\icons-png\arrow-u-l-white.png" />
+    <Content Include="js\images\icons-png\arrow-u-r-black.png" />
+    <Content Include="js\images\icons-png\arrow-u-r-white.png" />
+    <Content Include="js\images\icons-png\arrow-u-white.png" />
+    <Content Include="js\images\icons-png\audio-black.png" />
+    <Content Include="js\images\icons-png\audio-white.png" />
+    <Content Include="js\images\icons-png\back-black.png" />
+    <Content Include="js\images\icons-png\back-white.png" />
+    <Content Include="js\images\icons-png\bars-black.png" />
+    <Content Include="js\images\icons-png\bars-white.png" />
+    <Content Include="js\images\icons-png\bullets-black.png" />
+    <Content Include="js\images\icons-png\bullets-white.png" />
+    <Content Include="js\images\icons-png\calendar-black.png" />
+    <Content Include="js\images\icons-png\calendar-white.png" />
+    <Content Include="js\images\icons-png\camera-black.png" />
+    <Content Include="js\images\icons-png\camera-white.png" />
+    <Content Include="js\images\icons-png\carat-d-black.png" />
+    <Content Include="js\images\icons-png\carat-d-white.png" />
+    <Content Include="js\images\icons-png\carat-l-black.png" />
+    <Content Include="js\images\icons-png\carat-l-white.png" />
+    <Content Include="js\images\icons-png\carat-r-black.png" />
+    <Content Include="js\images\icons-png\carat-r-white.png" />
+    <Content Include="js\images\icons-png\carat-u-black.png" />
+    <Content Include="js\images\icons-png\carat-u-white.png" />
+    <Content Include="js\images\icons-png\check-black.png" />
+    <Content Include="js\images\icons-png\check-white.png" />
+    <Content Include="js\images\icons-png\clock-black.png" />
+    <Content Include="js\images\icons-png\clock-white.png" />
+    <Content Include="js\images\icons-png\cloud-black.png" />
+    <Content Include="js\images\icons-png\cloud-white.png" />
+    <Content Include="js\images\icons-png\comment-black.png" />
+    <Content Include="js\images\icons-png\comment-white.png" />
+    <Content Include="js\images\icons-png\delete-black.png" />
+    <Content Include="js\images\icons-png\delete-white.png" />
+    <Content Include="js\images\icons-png\edit-black.png" />
+    <Content Include="js\images\icons-png\edit-white.png" />
+    <Content Include="js\images\icons-png\eye-black.png" />
+    <Content Include="js\images\icons-png\eye-white.png" />
+    <Content Include="js\images\icons-png\forbidden-black.png" />
+    <Content Include="js\images\icons-png\forbidden-white.png" />
+    <Content Include="js\images\icons-png\forward-black.png" />
+    <Content Include="js\images\icons-png\forward-white.png" />
+    <Content Include="js\images\icons-png\gear-black.png" />
+    <Content Include="js\images\icons-png\gear-white.png" />
+    <Content Include="js\images\icons-png\grid-black.png" />
+    <Content Include="js\images\icons-png\grid-white.png" />
+    <Content Include="js\images\icons-png\heart-black.png" />
+    <Content Include="js\images\icons-png\heart-white.png" />
+    <Content Include="js\images\icons-png\home-black.png" />
+    <Content Include="js\images\icons-png\home-white.png" />
+    <Content Include="js\images\icons-png\info-black.png" />
+    <Content Include="js\images\icons-png\info-white.png" />
+    <Content Include="js\images\icons-png\location-black.png" />
+    <Content Include="js\images\icons-png\location-white.png" />
+    <Content Include="js\images\icons-png\lock-black.png" />
+    <Content Include="js\images\icons-png\lock-white.png" />
+    <Content Include="js\images\icons-png\mail-black.png" />
+    <Content Include="js\images\icons-png\mail-white.png" />
+    <Content Include="js\images\icons-png\minus-black.png" />
+    <Content Include="js\images\icons-png\minus-white.png" />
+    <Content Include="js\images\icons-png\navigation-black.png" />
+    <Content Include="js\images\icons-png\navigation-white.png" />
+    <Content Include="js\images\icons-png\phone-black.png" />
+    <Content Include="js\images\icons-png\phone-white.png" />
+    <Content Include="js\images\icons-png\plus-black.png" />
+    <Content Include="js\images\icons-png\plus-white.png" />
+    <Content Include="js\images\icons-png\power-black.png" />
+    <Content Include="js\images\icons-png\power-white.png" />
+    <Content Include="js\images\icons-png\recycle-black.png" />
+    <Content Include="js\images\icons-png\recycle-white.png" />
+    <Content Include="js\images\icons-png\refresh-black.png" />
+    <Content Include="js\images\icons-png\refresh-white.png" />
+    <Content Include="js\images\icons-png\search-black.png" />
+    <Content Include="js\images\icons-png\search-white.png" />
+    <Content Include="js\images\icons-png\shop-black.png" />
+    <Content Include="js\images\icons-png\shop-white.png" />
+    <Content Include="js\images\icons-png\star-black.png" />
+    <Content Include="js\images\icons-png\star-white.png" />
+    <Content Include="js\images\icons-png\tag-black.png" />
+    <Content Include="js\images\icons-png\tag-white.png" />
+    <Content Include="js\images\icons-png\user-black.png" />
+    <Content Include="js\images\icons-png\user-white.png" />
+    <Content Include="js\images\icons-png\video-black.png" />
+    <Content Include="js\images\icons-png\video-white.png" />
+    <Content Include="images\i_ico.png" />
+    <Content Include="images\photo.jpg" />
+    <Content Include="images\touxian0.png" />
+    <Content Include="images\u-ico.png" />
+    <Content Include="images\xx_head1.jpg" />
+    <Content Include="images\xx_head2.jpg" />
+    <Content Include="images\zx_banner.jpg" />
+    <Content Include="index.aspx" />
+    <Content Include="InsuranceConsult.aspx" />
+    <Content Include="js\foucs.js" />
+    <Content Include="js\IScroll\iscroll-infinite.js" />
+    <Content Include="js\IScroll\iscroll-lite.js" />
+    <Content Include="js\IScroll\iscroll-probe.js" />
+    <Content Include="js\IScroll\iscroll-zoom.js" />
+    <Content Include="js\IScroll\iscroll.js" />
+    <Content Include="js\IScroll\IScroll4.2.5.js" />
+    <Content Include="css\ISrcoll\scrollbar.png" />
+    <Content Include="js\jquery.cookie.js" />
+    <Content Include="js\jquery.mobile-1.4.5.css" />
+    <Content Include="js\jquery.mobile-1.4.5.js" />
+    <Content Include="js\jquery.mobile-1.4.5.min.css" />
+    <Content Include="js\jquery.mobile-1.4.5.min.js" />
+    <Content Include="js\jquery.mobile.external-png-1.4.5.css" />
+    <Content Include="js\jquery.mobile.external-png-1.4.5.min.css" />
+    <Content Include="js\jquery.mobile.icons-1.4.5.css" />
+    <Content Include="js\jquery.mobile.icons-1.4.5.min.css" />
+    <Content Include="js\jquery.mobile.inline-png-1.4.5.css" />
+    <Content Include="js\jquery.mobile.inline-png-1.4.5.min.css" />
+    <Content Include="js\jquery.mobile.inline-svg-1.4.5.css" />
+    <Content Include="js\jquery.mobile.inline-svg-1.4.5.min.css" />
+    <Content Include="js\jquery.mobile.structure-1.4.5.css" />
+    <Content Include="js\jquery.mobile.structure-1.4.5.min.css" />
+    <Content Include="js\jquery.mobile.theme-1.4.5.css" />
+    <Content Include="js\jquery.mobile.theme-1.4.5.min.css" />
+    <Content Include="js\jquery_cm.js" />
+    <Content Include="js\mobiscroll\mobiscroll.android-2.5.1.js" />
+    <Content Include="js\mobiscroll\mobiscroll.android-ics-2.5.2.js" />
+    <Content Include="js\mobiscroll\mobiscroll.core-2.5.2-zh.js" />
+    <Content Include="js\mobiscroll\mobiscroll.core-2.5.2.js" />
+    <Content Include="js\mobiscroll\mobiscroll.custom-2.14.4.min.js" />
+    <Content Include="js\mobiscroll\mobiscroll.custom-2.5.2.min.js" />
+    <Content Include="js\mobiscroll\mobiscroll.datetime-2.5.1-zh.js" />
+    <Content Include="js\mobiscroll\mobiscroll.datetime-2.5.1.js" />
+    <Content Include="js\mobiscroll\mobiscroll.ios-2.5.1.js" />
+    <Content Include="js\mobiscroll\mobiscroll.jqm-2.5.1.js" />
+    <Content Include="js\mobiscroll\mobiscroll.list-2.5.1.js" />
+    <Content Include="js\mobiscroll\mobiscroll.select-2.5.1.js" />
+    <Content Include="js\mobiscroll\mobiscroll.wp-2.5.2.js" />
+    <Content Include="js\myscroll.js" />
+    <Content Include="js\ShareSDK.js" />
+    <Content Include="plugins\com.enow.cordova.plugin.baidu\www\PushNotification.js" />
+    <Content Include="plugins\com.enow.cordova.plugin.baidu\www\PushNotificationListener.js" />
+    <Content Include="plugins\com.enow.cordova.plugin.denglu\www\QQDengLu.js" />
+    <Content Include="plugins\com.enow.cordova.plugin.denglu\www\WeiboDengLu.js" />
+    <Content Include="plugins\com.enow.cordova.plugin.fenxiang\www\WeiboFenXiang.js" />
+    <Content Include="plugins\com.enow.cordova.plugin.fenxiang\www\WeiXinFenXiang.js" />
+    <Content Include="plugins\com.enow.cordova.plugin.push\www\JPushActivity.js" />
+    <Content Include="plugins\com.enow.cordova.plugin.tencent\www\PushNotification.js" />
+    <Content Include="plugins\com.enow.cordova.plugin.tencent\www\PushNotificationListener.js" />
+    <Content Include="plugins\org.apache.cordova.battery-status\www\battery.js" />
+    <Content Include="plugins\org.apache.cordova.camera\www\Camera.js" />
+    <Content Include="plugins\org.apache.cordova.camera\www\CameraConstants.js" />
+    <Content Include="plugins\org.apache.cordova.camera\www\CameraPopoverHandle.js" />
+    <Content Include="plugins\org.apache.cordova.camera\www\CameraPopoverOptions.js" />
+    <Content Include="plugins\org.apache.cordova.contacts\www\Contact.js" />
+    <Content Include="plugins\org.apache.cordova.contacts\www\ContactAddress.js" />
+    <Content Include="plugins\org.apache.cordova.contacts\www\ContactError.js" />
+    <Content Include="plugins\org.apache.cordova.contacts\www\ContactField.js" />
+    <Content Include="plugins\org.apache.cordova.contacts\www\ContactFieldType.js" />
+    <Content Include="plugins\org.apache.cordova.contacts\www\ContactFindOptions.js" />
+    <Content Include="plugins\org.apache.cordova.contacts\www\ContactName.js" />
+    <Content Include="plugins\org.apache.cordova.contacts\www\ContactOrganization.js" />
+    <Content Include="plugins\org.apache.cordova.contacts\www\contacts.js" />
+    <Content Include="plugins\org.apache.cordova.device-motion\www\Acceleration.js" />
+    <Content Include="plugins\org.apache.cordova.device-motion\www\accelerometer.js" />
+    <Content Include="plugins\org.apache.cordova.device-orientation\www\compass.js" />
+    <Content Include="plugins\org.apache.cordova.device-orientation\www\CompassError.js" />
+    <Content Include="plugins\org.apache.cordova.device-orientation\www\CompassHeading.js" />
+    <Content Include="plugins\org.apache.cordova.device\www\device.js" />
+    <Content Include="plugins\org.apache.cordova.dialogs\www\android\notification.js" />
+    <Content Include="plugins\org.apache.cordova.dialogs\www\notification.js" />
+    <Content Include="plugins\org.apache.cordova.file-transfer\www\FileTransfer.js" />
+    <Content Include="plugins\org.apache.cordova.file-transfer\www\FileTransferError.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\android\FileSystem.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\DirectoryEntry.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\DirectoryReader.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\Entry.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\File.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\FileEntry.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\FileError.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\FileReader.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\FileSystem.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\fileSystemPaths.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\fileSystems-roots.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\fileSystems.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\FileUploadOptions.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\FileUploadResult.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\FileWriter.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\Flags.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\LocalFileSystem.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\Metadata.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\ProgressEvent.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\requestFileSystem.js" />
+    <Content Include="plugins\org.apache.cordova.file\www\resolveLocalFileSystemURI.js" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\globalization.js" />
+    <Content Include="plugins\org.apache.cordova.globalization\www\GlobalizationError.js" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\www\inappbrowser.js" />
+    <Content Include="plugins\org.apache.cordova.media-capture\www\capture.js" />
+    <Content Include="plugins\org.apache.cordova.media-capture\www\CaptureAudioOptions.js" />
+    <Content Include="plugins\org.apache.cordova.media-capture\www\CaptureError.js" />
+    <Content Include="plugins\org.apache.cordova.media-capture\www\CaptureImageOptions.js" />
+    <Content Include="plugins\org.apache.cordova.media-capture\www\CaptureVideoOptions.js" />
+    <Content Include="plugins\org.apache.cordova.media-capture\www\MediaFile.js" />
+    <Content Include="plugins\org.apache.cordova.media-capture\www\MediaFileData.js" />
+    <Content Include="plugins\org.apache.cordova.media\www\Media.js" />
+    <Content Include="plugins\org.apache.cordova.media\www\MediaError.js" />
+    <Content Include="plugins\org.apache.cordova.network-information\www\Connection.js" />
+    <Content Include="plugins\org.apache.cordova.network-information\www\network.js" />
+    <Content Include="plugins\org.apache.cordova.splashscreen\www\splashscreen.js" />
+    <Content Include="plugins\org.apache.cordova.statusbar\www\statusbar.js" />
+    <Content Include="plugins\org.apache.cordova.vibration\www\vibration.js" />
+    <Content Include="js\tinybox.js" />
+    <Content Include="kehufw.aspx" />
+    <Content Include="MessageCenter.aspx" />
+    <Content Include="more.aspx" />
+    <Content Include="MyCollect.aspx" />
+    <Content Include="myfangan.aspx" />
+    <Content Include="myfanganno.aspx" />
+    <Content Include="NewsDetail.aspx" />
+    <Content Include="NewsList.aspx" />
+    <Content Include="Newsreply.aspx" />
+    <Content Include="qqlogin.aspx" />
+    <Content Include="RelatedFile.aspx" />
+    <Content Include="Sample.html" />
+    <Content Include="shezhi.aspx" />
+    <Content Include="SysMessage.aspx" />
+    <Content Include="SysMessageList.aspx" />
+    <Content Include="SysMessageReply.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Weibo.aspx" />
+    <Content Include="Weibologin.aspx" />
+    <Content Include="xiaoxi.html" />
+    <Content Include="YouDian.aspx" />
+    <Content Include="zhitongche.aspx" />
+    <Content Include="ziliao.aspx" />
+    <Content Include="zixun.aspx" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ashx\GetVerCode.ashx" />
+    <Content Include="ashx\GetWxProvinceAndCity.ashx" />
+    <Content Include="ashx\Handler.ashx" />
+    <Content Include="ashx\uploadImgCode.ashx" />
+    <None Include="app.apk" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="js\images\icons-png\Thumbs.db" />
+    <None Include="js\images\icons-svg\action-black.svg" />
+    <None Include="js\images\icons-svg\action-white.svg" />
+    <None Include="js\images\icons-svg\alert-black.svg" />
+    <None Include="js\images\icons-svg\alert-white.svg" />
+    <None Include="js\images\icons-svg\arrow-d-black.svg" />
+    <None Include="js\images\icons-svg\arrow-d-l-black.svg" />
+    <None Include="js\images\icons-svg\arrow-d-l-white.svg" />
+    <None Include="js\images\icons-svg\arrow-d-r-black.svg" />
+    <None Include="js\images\icons-svg\arrow-d-r-white.svg" />
+    <None Include="js\images\icons-svg\arrow-d-white.svg" />
+    <None Include="js\images\icons-svg\arrow-l-black.svg" />
+    <None Include="js\images\icons-svg\arrow-l-white.svg" />
+    <None Include="js\images\icons-svg\arrow-r-black.svg" />
+    <None Include="js\images\icons-svg\arrow-r-white.svg" />
+    <None Include="js\images\icons-svg\arrow-u-black.svg" />
+    <None Include="js\images\icons-svg\arrow-u-l-black.svg" />
+    <None Include="js\images\icons-svg\arrow-u-l-white.svg" />
+    <None Include="js\images\icons-svg\arrow-u-r-black.svg" />
+    <None Include="js\images\icons-svg\arrow-u-r-white.svg" />
+    <None Include="js\images\icons-svg\arrow-u-white.svg" />
+    <None Include="js\images\icons-svg\audio-black.svg" />
+    <None Include="js\images\icons-svg\audio-white.svg" />
+    <None Include="js\images\icons-svg\back-black.svg" />
+    <None Include="js\images\icons-svg\back-white.svg" />
+    <None Include="js\images\icons-svg\bars-black.svg" />
+    <None Include="js\images\icons-svg\bars-white.svg" />
+    <None Include="js\images\icons-svg\bullets-black.svg" />
+    <None Include="js\images\icons-svg\bullets-white.svg" />
+    <None Include="js\images\icons-svg\calendar-black.svg" />
+    <None Include="js\images\icons-svg\calendar-white.svg" />
+    <None Include="js\images\icons-svg\camera-black.svg" />
+    <None Include="js\images\icons-svg\camera-white.svg" />
+    <None Include="js\images\icons-svg\carat-d-black.svg" />
+    <None Include="js\images\icons-svg\carat-d-white.svg" />
+    <None Include="js\images\icons-svg\carat-l-black.svg" />
+    <None Include="js\images\icons-svg\carat-l-white.svg" />
+    <None Include="js\images\icons-svg\carat-r-black.svg" />
+    <None Include="js\images\icons-svg\carat-r-white.svg" />
+    <None Include="js\images\icons-svg\carat-u-black.svg" />
+    <None Include="js\images\icons-svg\carat-u-white.svg" />
+    <None Include="js\images\icons-svg\check-black.svg" />
+    <None Include="js\images\icons-svg\check-white.svg" />
+    <None Include="js\images\icons-svg\clock-black.svg" />
+    <None Include="js\images\icons-svg\clock-white.svg" />
+    <None Include="js\images\icons-svg\cloud-black.svg" />
+    <None Include="js\images\icons-svg\cloud-white.svg" />
+    <None Include="js\images\icons-svg\comment-black.svg" />
+    <None Include="js\images\icons-svg\comment-white.svg" />
+    <None Include="js\images\icons-svg\delete-black.svg" />
+    <None Include="js\images\icons-svg\delete-white.svg" />
+    <None Include="js\images\icons-svg\edit-black.svg" />
+    <None Include="js\images\icons-svg\edit-white.svg" />
+    <None Include="js\images\icons-svg\eye-black.svg" />
+    <None Include="js\images\icons-svg\eye-white.svg" />
+    <None Include="js\images\icons-svg\forbidden-black.svg" />
+    <None Include="js\images\icons-svg\forbidden-white.svg" />
+    <None Include="js\images\icons-svg\forward-black.svg" />
+    <None Include="js\images\icons-svg\forward-white.svg" />
+    <None Include="js\images\icons-svg\gear-black.svg" />
+    <None Include="js\images\icons-svg\gear-white.svg" />
+    <None Include="js\images\icons-svg\grid-black.svg" />
+    <None Include="js\images\icons-svg\grid-white.svg" />
+    <None Include="js\images\icons-svg\heart-black.svg" />
+    <None Include="js\images\icons-svg\heart-white.svg" />
+    <None Include="js\images\icons-svg\home-black.svg" />
+    <None Include="js\images\icons-svg\home-white.svg" />
+    <None Include="js\images\icons-svg\info-black.svg" />
+    <None Include="js\images\icons-svg\info-white.svg" />
+    <None Include="js\images\icons-svg\location-black.svg" />
+    <None Include="js\images\icons-svg\location-white.svg" />
+    <None Include="js\images\icons-svg\lock-black.svg" />
+    <None Include="js\images\icons-svg\lock-white.svg" />
+    <None Include="js\images\icons-svg\mail-black.svg" />
+    <None Include="js\images\icons-svg\mail-white.svg" />
+    <None Include="js\images\icons-svg\minus-black.svg" />
+    <None Include="js\images\icons-svg\minus-white.svg" />
+    <None Include="js\images\icons-svg\navigation-black.svg" />
+    <None Include="js\images\icons-svg\navigation-white.svg" />
+    <None Include="js\images\icons-svg\phone-black.svg" />
+    <None Include="js\images\icons-svg\phone-white.svg" />
+    <None Include="js\images\icons-svg\plus-black.svg" />
+    <None Include="js\images\icons-svg\plus-white.svg" />
+    <None Include="js\images\icons-svg\power-black.svg" />
+    <None Include="js\images\icons-svg\power-white.svg" />
+    <None Include="js\images\icons-svg\recycle-black.svg" />
+    <None Include="js\images\icons-svg\recycle-white.svg" />
+    <None Include="js\images\icons-svg\refresh-black.svg" />
+    <None Include="js\images\icons-svg\refresh-white.svg" />
+    <None Include="js\images\icons-svg\search-black.svg" />
+    <None Include="js\images\icons-svg\search-white.svg" />
+    <None Include="js\images\icons-svg\shop-black.svg" />
+    <None Include="js\images\icons-svg\shop-white.svg" />
+    <None Include="js\images\icons-svg\star-black.svg" />
+    <None Include="js\images\icons-svg\star-white.svg" />
+    <None Include="js\images\icons-svg\tag-black.svg" />
+    <None Include="js\images\icons-svg\tag-white.svg" />
+    <None Include="js\images\icons-svg\user-black.svg" />
+    <None Include="js\images\icons-svg\user-white.svg" />
+    <None Include="js\images\icons-svg\video-black.svg" />
+    <None Include="js\images\icons-svg\video-white.svg" />
+    <None Include="images\Thumbs.db" />
+    <Content Include="MasterPage\WebApp.Master" />
+    <None Include="js\jquery.mobile-1.4.5.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Enow.MAJU.BLL\Enow.MAJU.BLL.csproj">
+      <Project>{3119CCBD-64C3-4F10-B954-04C9AB6F23B4}</Project>
+      <Name>Enow.MAJU.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Enow.MAJU.Model\Enow.MAJU.Model.csproj">
+      <Project>{35DBA4DE-4CF7-436B-8F60-6F664F318402}</Project>
+      <Name>Enow.MAJU.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Enow.MAJU.SMS\Enow.MAJU.SMS.csproj">
+      <Project>{4E3FB278-8FA0-404C-A702-0B55883AACC4}</Project>
+      <Name>Enow.MAJU.SMS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Enow.MAJU.Utility\Enow.MAJU.Utility.csproj">
+      <Project>{67A8DB4B-7746-4DD6-A3D0-CD09A378E24F}</Project>
+      <Name>Enow.MAJU.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>25126</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

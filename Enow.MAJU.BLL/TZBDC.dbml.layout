@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.125, 32.25" name="TZBDC">
+  <DataContextMoniker Name="/FWDC" />
+  <nestedChildShapes>
+    <classShape Id="163e633a-b279-4858-8f0f-e342e489d6de" absoluteBounds="1.25, 0.5, 2, 2.1228255208333335">
+      <DataClassMoniker Name="/FWDC/tbl_EventLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab693c00-175a-4d7c-bb43-f4d2959a6d77" absoluteBounds="1.2649999999999997, 0.96, 1.9700000000000002, 1.5628255208333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="71f66c01-efcb-4b7d-97b8-5874ffb4b52c" absoluteBounds="3.625, 0.5, 2, 3.4717838541666666">
+      <DataClassMoniker Name="/FWDC/ManagerList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db13cc43-1982-4917-9f29-a05d0d8e6e06" absoluteBounds="3.6399999999999997, 0.96, 1.9700000000000002, 2.9117838541666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a3fe6d94-67d8-4532-81cd-4abe4c184f28" absoluteBounds="8.625, 1, 2, 1.6169661458333331">
+      <DataClassMoniker Name="/FWDC/MemberCollect" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d344e779-e4d7-41d5-9358-39af7bccbd10" absoluteBounds="8.64, 1.46, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="88c20d75-4be5-4d69-9b4b-3844b6bbbde4" absoluteBounds="5, 12.25, 2, 1.4483463541666666">
+      <DataClassMoniker Name="/FWDC/MenuList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="07950bf4-f5ba-4647-a98b-d91e70a6b41c" absoluteBounds="5.0150000000000006, 12.71, 1.9700000000000002, 0.88834635416666663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9c7c91e2-8f9e-4991-80ac-44709a1525f2" absoluteBounds="3.5, 4.75, 2, 1.6169661458333327">
+      <DataClassMoniker Name="/FWDC/tbl_NewsReply" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b228dcb8-ec6e-4a7f-97a2-4417f9d1b2e2" absoluteBounds="3.515, 5.21, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="35e2215f-fb67-4f7c-895d-6dad9c76a311" absoluteBounds="0.5, 6.5, 2, 2.7973046875000005">
+      <DataClassMoniker Name="/FWDC/tbl_Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0d13bc1f-cfa9-4f65-9ecc-83492dbc47cf" absoluteBounds="0.51500000000000012, 6.96, 1.9700000000000002, 2.2373046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fc4f62dc-a4ba-4800-8f75-b091b313c172" absoluteBounds="2.75, 12.125, 2, 1.6169661458333344">
+      <DataClassMoniker Name="/FWDC/RoleList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6742f0ff-99a4-467b-9362-b41d3f99e86b" absoluteBounds="2.7649999999999997, 12.585, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="30e40c27-4da2-4c60-a6c9-4ed8ebdb8a6e" absoluteBounds="0.5, 12, 2, 1.4483463541666666">
+      <DataClassMoniker Name="/FWDC/RoleClass" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c9fadef-69b7-482a-861b-6707a3b02431" absoluteBounds="0.51500000000000057, 12.46, 1.9700000000000002, 0.88834635416666663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="41c9355f-1cfc-4e95-a952-859f778d2967" absoluteBounds="5.125, 10.875, 2, 1.1111067708333344">
+      <DataClassMoniker Name="/FWDC/tbl_SignCode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3c427430-d584-4a14-afbd-eda3760cee4d" absoluteBounds="5.14, 11.335, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f0ead65a-1fa7-4ec5-be08-29282bd47342" absoluteBounds="7.25, 14, 2, 1.9542057291666666">
+      <DataClassMoniker Name="/FWDC/tbl_SysArea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6224c39a-4f02-443c-8a73-7db150b62dda" absoluteBounds="7.2650000000000006, 14.46, 1.9700000000000002, 1.3942057291666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9d2b198e-0cdf-4816-96be-4ac893c9172c" absoluteBounds="0.5, 14, 2, 2.1228255208333344">
+      <DataClassMoniker Name="/FWDC/tbl_SysCountry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c0da9e28-811c-4596-bf6c-bc80d30e364e" absoluteBounds="0.51499999999999968, 14.46, 1.9700000000000002, 1.5628255208333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e7ed641c-8cf2-4b5d-9fa4-63551045a334" absoluteBounds="2.75, 14.125, 2, 1.7855859375000005">
+      <DataClassMoniker Name="/FWDC/tbl_SysProvince" />
+      <nestedChildShapes>
+        <elementListCompartment Id="adebd78e-00fa-479a-b7d0-210b95b7d5c1" absoluteBounds="2.7649999999999997, 14.585, 1.9700000000000002, 1.2255859375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 15.1017926025391); (2.75 : 15.1017926025391)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FWDC/tbl_SysCountry/tbl_SysCountry_tbl_SysProvince" />
+      <nodes>
+        <classShapeMoniker Id="9d2b198e-0cdf-4816-96be-4ac893c9172c" />
+        <classShapeMoniker Id="e7ed641c-8cf2-4b5d-9fa4-63551045a334" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f199b7cf-baa4-48b1-9efc-42ad48be9f4d" absoluteBounds="5, 14.125, 2, 1.7855859375000005">
+      <DataClassMoniker Name="/FWDC/tbl_SysCity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="86154886-7ee7-4b20-8043-6eddd8275ebf" absoluteBounds="5.015, 14.585, 1.9700000000000002, 1.2255859375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7 : 15.1017926025391); (7.25 : 15.1017926025391)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FWDC/tbl_SysCity/tbl_SysCity_tbl_SysArea" />
+      <nodes>
+        <classShapeMoniker Id="f199b7cf-baa4-48b1-9efc-42ad48be9f4d" />
+        <classShapeMoniker Id="f0ead65a-1fa7-4ec5-be08-29282bd47342" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.75 : 15.1017926025391); (5 : 15.1017926025391)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FWDC/tbl_SysProvince/tbl_SysProvince_tbl_SysCity" />
+      <nodes>
+        <classShapeMoniker Id="e7ed641c-8cf2-4b5d-9fa4-63551045a334" />
+        <classShapeMoniker Id="f199b7cf-baa4-48b1-9efc-42ad48be9f4d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d4990f94-80ef-47a5-8771-c6a19e6ad7eb" absoluteBounds="8.375, 16.75, 2, 1.2797265625000023">
+      <DataClassMoniker Name="/FWDC/tbl_SysMsg" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e5e1f4f6-e28e-4bf2-8b4e-4a054a51ffdd" absoluteBounds="8.39, 17.21, 1.9700000000000002, 0.7197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="429d9aea-275b-48ef-87d1-13039bc3dd20" absoluteBounds="7.25, 12.25, 2, 1.4483463541666666">
+      <DataClassMoniker Name="/FWDC/tbl_UserRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb447c77-063f-46f1-af0a-23977b135472" absoluteBounds="7.2650000000000006, 12.71, 1.9700000000000002, 0.88834635416666663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0c53875f-5f9b-41dc-b31d-99079aac6f43" absoluteBounds="9.75, 10.375, 2, 1.6169661458333344">
+      <DataClassMoniker Name="/FWDC/dt_RoleClass" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c5e8a0d-84cd-43d8-86d2-0b93eda730c2" absoluteBounds="9.765, 10.835, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c58fe3e-73b2-46cb-afcc-00f26a515c2f" absoluteBounds="9.75, 12.375, 2, 2.1228255208333344">
+      <DataClassMoniker Name="/FWDC/RoleListView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="673d46ef-9b4a-48c9-bca2-b7167edf9f81" absoluteBounds="9.765, 12.835, 1.9700000000000002, 1.5628255208333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e999940f-8ed8-4418-a78d-cacfd8374aa4" absoluteBounds="9.875, 15, 2, 1.7855859375000023">
+      <DataClassMoniker Name="/FWDC/dt_RoleMenu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37f368b6-d044-4f95-a6aa-fcc9e26ad918" absoluteBounds="9.89, 15.46, 1.9700000000000002, 1.2255859375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="06a44532-f6e1-4c92-82a0-d1bb1c84939a" absoluteBounds="1.25, 21.625, 2, 1.6169661458333344">
+      <DataClassMoniker Name="/FWDC/tbl_Adv" />
+      <nestedChildShapes>
+        <elementListCompartment Id="74742380-9738-478a-8db5-71a1ce94b617" absoluteBounds="1.2650000000000001, 22.085, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="312508b4-c7cc-4a66-9273-8bf80c412e83" absoluteBounds="1.25, 23.625, 2, 1.6169661458333344">
+      <DataClassMoniker Name="/FWDC/tbl_ServiceInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0e82dde0-b95a-4c0a-b856-140a3b46cd5d" absoluteBounds="1.2650000000000001, 24.085, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c41ce9f8-27f1-4fa0-91d3-d8acec9d756d" absoluteBounds="0.5, 16.375, 2, 2.46006510416667">
+      <DataClassMoniker Name="/FWDC/tbl_SysMessage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="18ce7d2e-83fa-4b28-8576-15f1681a8047" absoluteBounds="0.51500000000000012, 16.835, 1.9700000000000002, 1.9000651041666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="14f12e10-22a9-4534-998a-644fa8afda22" absoluteBounds="3.5, 25.25, 2, 2.1228255208333344">
+      <DataClassMoniker Name="/FWDC/dt_Message" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bfceed3b-6cf8-4ace-b789-0b4c7b1bb43f" absoluteBounds="3.5149999999999997, 25.71, 1.9700000000000002, 1.5628255208333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c1982b86-c68b-45c9-8db8-a956c4cb7062" absoluteBounds="0.875, 3, 2, 3.1345442708333326">
+      <DataClassMoniker Name="/FWDC/tbl_News" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a464a21-0d3b-4608-9c0e-d5633653803e" absoluteBounds="0.89000000000000012, 3.46, 1.9700000000000002, 2.574544270833333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 5.61587137858073); (3.5 : 5.61587137858073)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FWDC/tbl_News/tbl_News_tbl_NewsReply" />
+      <nodes>
+        <classShapeMoniker Id="c1982b86-c68b-45c9-8db8-a956c4cb7062" />
+        <classShapeMoniker Id="9c7c91e2-8f9e-4991-80ac-44709a1525f2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f3f2cd2d-29ea-4278-a561-8461ada44b0a" absoluteBounds="7.375, 6.125, 2, 1.7855859374999996">
+      <DataClassMoniker Name="/FWDC/tbl_MemberTopicReply" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eacd22e9-6862-40ad-917e-d5071edcdd8b" absoluteBounds="7.39, 6.585, 1.9700000000000002, 1.2255859375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4a27226a-19e5-4aa3-b5ae-e465fdcd1b70" absoluteBounds="7.375, 8.625, 2, 1.6169661458333344">
+      <DataClassMoniker Name="/FWDC/tbl_ProductType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cda6c078-c6b1-46ad-927f-3c30a3f03544" absoluteBounds="7.3900000000000006, 9.085, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b99c1859-6411-438d-883d-c3990b48d3f8" absoluteBounds="4.125, 27.625, 2, 2.96592447916667">
+      <DataClassMoniker Name="/FWDC/dt_SysMessageSend" />
+      <nestedChildShapes>
+        <elementListCompartment Id="932d3dab-c7ef-4d13-9df8-b2252a082e57" absoluteBounds="4.14, 28.085, 1.9700000000000002, 2.4059244791666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6bd57e73-844e-4dbb-b6d6-5853156cb0a1" absoluteBounds="8.5, 3, 2, 2.7973046874999996">
+      <DataClassMoniker Name="/FWDC/tbl_MemberTopic" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3cea01d-22a3-4e97-8d09-a9fa75e12e56" absoluteBounds="8.515, 3.46, 1.9700000000000002, 2.2373046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.9375 : 6.09970336914062); (8.9375 : 6.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FWDC/tbl_MemberTopic/tbl_MemberTopic_tbl_MemberTopicReply" />
+      <nodes>
+        <classShapeMoniker Id="6bd57e73-844e-4dbb-b6d6-5853156cb0a1" />
+        <classShapeMoniker Id="f3f2cd2d-29ea-4278-a561-8461ada44b0a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c169845b-576f-468b-8e51-faaba0d62edc" absoluteBounds="6, 16.625, 2, 1.4483463541666701">
+      <DataClassMoniker Name="/FWDC/tbl_SysMessageSend" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5815f791-67e8-4521-97a2-74e977668e02" absoluteBounds="6.015, 17.085, 1.9700000000000002, 0.88834635416666663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ba631d1c-d43a-4a25-a1de-9c07724e8705" absoluteBounds="2.875, 7, 2, 1.7855859375000005">
+      <DataClassMoniker Name="/FWDC/tbl_ProductReply" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63cb0288-3a55-4d6b-8983-2d52bddb38ef" absoluteBounds="2.89, 7.46, 1.9700000000000002, 1.2255859375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 7.97679260253906); (2.875 : 7.97679260253906)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FWDC/tbl_Product/tbl_Product_tbl_ProductReply" />
+      <nodes>
+        <classShapeMoniker Id="35e2215f-fb67-4f7c-895d-6dad9c76a311" />
+        <classShapeMoniker Id="ba631d1c-d43a-4a25-a1de-9c07724e8705" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7b4a83b5-071e-450f-8f41-b73deb3a817e" absoluteBounds="3.875, 19.25, 2, 4.9893619791666666">
+      <DataClassMoniker Name="/FWDC/dt_MemberTopic" />
+      <nestedChildShapes>
+        <elementListCompartment Id="acf9b7b6-09e8-49f0-ba51-0efbb2621763" absoluteBounds="3.8899999999999997, 19.71, 1.9700000000000002, 4.4293619791666661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="37d391a5-81f0-4162-9b4e-bcfcbaa37eb2" absoluteBounds="6.625, 27.625, 2, 1.9542057291666701">
+      <DataClassMoniker Name="/FWDC/dt_ProductReplyView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16ec0c26-5008-4e11-9cbf-f2017a5109d8" absoluteBounds="6.64, 28.085, 1.9700000000000002, 1.3942057291666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a127612-7dfc-4fd9-b4b5-013a70a7fe4a" absoluteBounds="8.875, 18.375, 2, 6.0010807291666666">
+      <DataClassMoniker Name="/FWDC/dt_ProductInterview" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f943789-712e-42ea-a129-39dde3d09511" absoluteBounds="8.89, 18.835, 1.9700000000000002, 5.4410807291666661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="819b1700-a9b8-4e2a-884f-18fe233ab66d" absoluteBounds="1.125, 19.25, 2, 2.1228255208333344">
+      <DataClassMoniker Name="/FWDC/dt_NewsReply" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fdfaf989-a767-496c-882b-808753268a40" absoluteBounds="1.1400000000000001, 19.71, 1.9700000000000002, 1.5628255208333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bcfcf02b-0a0e-4d49-bcd9-c9e1af3cc177" absoluteBounds="5, 7.125, 2, 2.9659244791666666">
+      <DataClassMoniker Name="/FWDC/tbl_ProductInterview" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5d9f0c73-dfd6-4c61-8de6-e33202aa8566" absoluteBounds="5.015, 7.5850000000000009, 1.9700000000000002, 2.4059244791666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7c469e53-8ad2-41fe-aa45-41fcee56bb24" absoluteBounds="6.25, 0.5, 2, 5.4952213541666657">
+      <DataClassMoniker Name="/FWDC/tbl_Member" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8765c1f5-d841-4413-9c86-a63232265415" absoluteBounds="6.265, 0.96, 1.9700000000000002, 4.9352213541666661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 1.80848307291667); (8.625 : 1.80848307291667)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FWDC/tbl_Member/tbl_Member_MemberCollect" />
+      <nodes>
+        <classShapeMoniker Id="7c469e53-8ad2-41fe-aa45-41fcee56bb24" />
+        <classShapeMoniker Id="a3fe6d94-67d8-4532-81cd-4abe4c184f28" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 4.39865234375); (8.5 : 4.39865234375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FWDC/tbl_Member/tbl_Member_tbl_MemberTopic" />
+      <nodes>
+        <classShapeMoniker Id="7c469e53-8ad2-41fe-aa45-41fcee56bb24" />
+        <classShapeMoniker Id="6bd57e73-844e-4dbb-b6d6-5853156cb0a1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b9c545b3-813a-4fda-bdaf-3f4a3285739b" absoluteBounds="3.375, 16.25, 2, 2.1228255208333344">
+      <DataClassMoniker Name="/FWDC/tbl_SysMessageReply" />
+      <nestedChildShapes>
+        <elementListCompartment Id="032bf23e-9f09-4718-84cb-d04c46714dc6" absoluteBounds="3.39, 16.71, 1.9700000000000002, 1.5628255208333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 17.3739127604167); (3.375 : 17.3739127604167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FWDC/tbl_SysMessage/tbl_SysMessage_tbl_SysMessageReply" />
+      <nodes>
+        <classShapeMoniker Id="c41ce9f8-27f1-4fa0-91d3-d8acec9d756d" />
+        <classShapeMoniker Id="b9c545b3-813a-4fda-bdaf-3f4a3285739b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="683ed3a8-a098-4e98-ac3a-2d89319c0596" absoluteBounds="6.625, 30, 2, 1.9542057291666701">
+      <DataClassMoniker Name="/FWDC/dt_MemberCollect" />
+      <nestedChildShapes>
+        <elementListCompartment Id="29d777be-3380-4a81-85af-ac3d6e58a297" absoluteBounds="6.64, 30.46, 1.9700000000000002, 1.3942057291666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f91d490a-caf9-47ad-acff-491669000fbb" absoluteBounds="0.875, 27.5, 2, 1.6169661458333344">
+      <DataClassMoniker Name="/FWDC/dt_ProductConsult" />
+      <nestedChildShapes>
+        <elementListCompartment Id="83bc5fbf-9df6-4eb6-ad00-7cc24fbde921" absoluteBounds="0.89000000000000012, 27.96, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="91967902-bb01-4ac6-88f5-497a37f9fcb0" absoluteBounds="9.625, 6.5, 2, 2.1228255208333326">
+      <DataClassMoniker Name="/FWDC/dt_Top10" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a5927d6f-2173-4972-a9e5-af8b5d032c64" absoluteBounds="9.64, 6.9600000000000009, 1.9700000000000002, 1.5628255208333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a84d6de2-0d03-48d4-bd3c-29c1256d93bf" absoluteBounds="2.75, 9.125, 2, 2.4600651041666666">
+      <DataClassMoniker Name="/FWDC/tbl_ProductSolution" />
+      <nestedChildShapes>
+        <elementListCompartment Id="29693713-e064-4aff-9f48-3b9a2acd0da7" absoluteBounds="2.765, 9.585, 1.9700000000000002, 1.9000651041666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.75 : 9.77036153157552); (5 : 9.77036153157552)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FWDC/tbl_ProductSolution/tbl_ProductSolution_tbl_ProductInterview" />
+      <nodes>
+        <classShapeMoniker Id="a84d6de2-0d03-48d4-bd3c-29c1256d93bf" />
+        <classShapeMoniker Id="bcfcf02b-0a0e-4d49-bcd9-c9e1af3cc177" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 9.36235168457031); (2.75 : 9.36235168457031)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FWDC/tbl_Product/tbl_Product_tbl_ProductSolution" />
+      <nodes>
+        <classShapeMoniker Id="35e2215f-fb67-4f7c-895d-6dad9c76a311" />
+        <classShapeMoniker Id="a84d6de2-0d03-48d4-bd3c-29c1256d93bf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d6c394de-3ef7-45ce-9a84-f904d6a9c13f" absoluteBounds="6.375, 18.625, 2, 5.1579817708333344">
+      <DataClassMoniker Name="/FWDC/dt_ProductSolution" />
+      <nestedChildShapes>
+        <elementListCompartment Id="471a601e-0064-46d9-8ee0-7499a2bb155b" absoluteBounds="6.39, 19.085, 1.9700000000000002, 4.597981770833333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="db3e46da-afd8-4299-b52c-af9e6ee58afb" absoluteBounds="6.375, 24.75, 2, 2.1228255208333344">
+      <DataClassMoniker Name="/FWDC/dt_MemberTopicReply" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f453d597-eeaa-4754-bbe3-e7e588e915e7" absoluteBounds="6.39, 25.21, 1.9700000000000002, 1.5628255208333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fecfcd1d-cbff-4faf-be6f-344212351262" absoluteBounds="9.25, 25.625, 2, 2.2914453125">
+      <DataClassMoniker Name="/FWDC/dt_ProductReply" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd1aba82-0036-4132-99ab-5c4b807bbe19" absoluteBounds="9.265, 26.085, 1.9700000000000002, 1.7314453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

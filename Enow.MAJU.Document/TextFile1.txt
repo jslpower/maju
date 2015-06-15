@@ -1,0 +1,5 @@
+﻿    public FWDC() :
+        base(global::System.Configuration.ConfigurationManager.ConnectionStrings["MJBXConnectionString"].ConnectionString, mappingSource)
+    {
+        OnCreated();
+    }

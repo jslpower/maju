@@ -1,0 +1,626 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MJBX" Class="FWDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.1.254;Initial Catalog=MJBX;Persist Security Info=True;User ID=sa" SettingsObjectName="Enow.MAJU.BLL.Properties.Settings" SettingsPropertyName="MJBXConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_EventLog" Member="tbl_EventLog">
+    <Type Name="tbl_EventLog">
+      <Column Name="Id" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OperatorId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OperatorName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EventTitle" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="EventInfo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Ip" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ManagerList" Member="ManagerList">
+    <Type Name="ManagerList">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EmployeeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ContactTel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PermissionList" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LoginCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastLoginIp" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="LastLoginTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="QuickMenu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FieldId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="FieldName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_MemberCollect" Member="MemberCollect">
+    <Type Name="MemberCollect">
+      <Column Name="CollectId" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RelatedType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="RelatedId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Member_MemberCollect" Member="tbl_Member" ThisKey="MemberId" OtherKey="MemberId" Type="tbl_Member" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Menu" Member="MenuList">
+    <Type Name="MenuList">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MenuName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IcoPath" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_NewsReply" Member="tbl_NewsReply">
+    <Type Name="tbl_NewsReply">
+      <Column Name="ReplyId" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NewsId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="Context" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_News_tbl_NewsReply" Member="tbl_News" ThisKey="NewsId" OtherKey="NewsId" Type="tbl_News" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Product" Member="tbl_Product">
+    <Type Name="tbl_Product">
+      <Column Name="ProductId" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TypeId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Company" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Target" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Advantage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OtherInfo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RelatedFile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="InterviewNote" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Collects" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SortId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Product_tbl_ProductReply" Member="tbl_ProductReply" ThisKey="ProductId" OtherKey="ProductId" Type="tbl_ProductReply" />
+      <Association Name="tbl_Product_tbl_ProductSolution" Member="tbl_ProductSolution" ThisKey="ProductId" OtherKey="ProductId" Type="tbl_ProductSolution" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Role" Member="RoleList">
+    <Type Name="RoleList">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClassId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PerName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="IsMenuView" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_RoleClass" Member="RoleClass">
+    <Type Name="RoleClass">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MenuId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClassName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IcoPath" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_SignCode" Member="tbl_SignCode">
+    <Type Name="tbl_SignCode">
+      <Column Name="Id" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CodeSign" Type="System.String" DbType="NVarChar(800)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_SysArea" Member="tbl_SysArea">
+    <Type Name="tbl_SysArea">
+      <Column Name="CountyId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CityId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="JP" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QP" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EnName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ThName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="tbl_SysCity_tbl_SysArea" Member="tbl_SysCity" ThisKey="CityId" OtherKey="CityId" Type="tbl_SysCity" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_SysCountry" Member="tbl_SysCountry">
+    <Type Name="tbl_SysCountry">
+      <Column Name="CountryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="JP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QP" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EnName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="IsDefault" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="SequenceId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_SysCountry_tbl_SysProvince" Member="tbl_SysProvince" ThisKey="CountryId" OtherKey="CountryId" Type="tbl_SysProvince" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_SysProvince" Member="tbl_SysProvince">
+    <Type Name="tbl_SysProvince">
+      <Column Name="ProvinceId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CountryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="JP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QP" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EnName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="tbl_SysProvince_tbl_SysCity" Member="tbl_SysCity" ThisKey="ProvinceId" OtherKey="ProvinceId" Type="tbl_SysCity" />
+      <Association Name="tbl_SysCountry_tbl_SysProvince" Member="tbl_SysCountry" ThisKey="CountryId" OtherKey="CountryId" Type="tbl_SysCountry" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_SysCity" Member="tbl_SysCity">
+    <Type Name="tbl_SysCity">
+      <Column Name="CityId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProvinceId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="JP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QP" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EnName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="tbl_SysCity_tbl_SysArea" Member="tbl_SysArea" ThisKey="CityId" OtherKey="CityId" Type="tbl_SysArea" />
+      <Association Name="tbl_SysProvince_tbl_SysCity" Member="tbl_SysProvince" ThisKey="ProvinceId" OtherKey="ProvinceId" Type="tbl_SysProvince" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_SysMsg" Member="tbl_SysMsg">
+    <Type Name="tbl_SysMsg">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MsgInfo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_UserRole" Member="tbl_UserRole">
+    <Type Name="tbl_UserRole">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PerList" Type="System.String" DbType="NVarChar(3000)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dt_RoleClass" Member="dt_RoleClass">
+    <Type Name="dt_RoleClass">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MenuId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClassName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IcoPath" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dt_RoleList" Member="RoleListView">
+    <Type Name="RoleListView">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MenuId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MenuName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClassName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PerName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="IsMenuView" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dt_RoleMenu" Member="dt_RoleMenu">
+    <Type Name="dt_RoleMenu">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClassId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MenuName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IcoPath" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Adv" Member="tbl_Adv">
+    <Type Name="tbl_Adv">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PhotoPath" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SortId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ServiceInfo" Member="tbl_ServiceInfo">
+    <Type Name="tbl_ServiceInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WeChat" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QQ" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Weibo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_SysMessage" Member="tbl_SysMessage">
+    <Type Name="tbl_SysMessage">
+      <Column Name="MessageId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Context" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Replys" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Clicks" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Collects" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsHot" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="IsTop" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="OperatorId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="OperatorName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_SysMessage_tbl_SysMessageReply" Member="tbl_SysMessageReply" ThisKey="MessageId" OtherKey="MessageId" Type="tbl_SysMessageReply" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dt_Message" Member="dt_Message">
+    <Type Name="dt_Message">
+      <Column Name="MessageId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Context" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OperatorId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="OperatorName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ReplyId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="ReplyContext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_News" Member="tbl_News">
+    <Type Name="tbl_News">
+      <Column Name="NewsId" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="PhotoPath" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Context" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Replys" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Clicks" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Collects" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsHot" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="IsTop" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="IsEssence" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="state" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="OperatorId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OperatorName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_News_tbl_NewsReply" Member="tbl_NewsReplies" ThisKey="NewsId" OtherKey="NewsId" Type="tbl_NewsReply" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_MemberTopicReply" Member="tbl_MemberTopicReply">
+    <Type Name="tbl_MemberTopicReply">
+      <Column Name="ReplyId" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TopicId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="Context" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsRead" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_MemberTopic_tbl_MemberTopicReply" Member="tbl_MemberTopic" ThisKey="TopicId" OtherKey="TopicId" Type="tbl_MemberTopic" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ProductType" Member="tbl_ProductType">
+    <Type Name="tbl_ProductType">
+      <Column Name="TypeId" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="SortId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsTop" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dt_SysMessageSend" Member="dt_SysMessageSends">
+    <Type Name="dt_SysMessageSend">
+      <Column Name="SendId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="IsRead" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Context" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Replys" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Clicks" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Collects" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsHot" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="IsTop" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="OperatorId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="OperatorName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_MemberTopic" Member="tbl_MemberTopic">
+    <Type Name="tbl_MemberTopic">
+      <Column Name="TopicId" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Context" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Replys" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Clicks" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Collects" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsHot" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="IsTop" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="IsEssence" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_MemberTopic_tbl_MemberTopicReply" Member="tbl_MemberTopicReply" ThisKey="TopicId" OtherKey="TopicId" Type="tbl_MemberTopicReply" />
+      <Association Name="tbl_Member_tbl_MemberTopic" Member="tbl_Member" ThisKey="MemberId" OtherKey="MemberId" Type="tbl_Member" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_SysMessageSend" Member="tbl_SysMessageSend">
+    <Type Name="tbl_SysMessageSend">
+      <Column Name="SendId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MessageId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="IsRead" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ProductReply" Member="tbl_ProductReply">
+    <Type Name="tbl_ProductReply">
+      <Column Name="ReplyId" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="Context" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsSysReply" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Product_tbl_ProductReply" Member="tbl_Product" ThisKey="ProductId" OtherKey="ProductId" Type="tbl_Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dt_MemberTopic" Member="dt_MemberTopic">
+    <Type Name="dt_MemberTopic">
+      <Column Name="TopicId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Context" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Replys" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Clicks" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Collects" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ProvinceName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CityName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AreaName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NickName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HeadPhoto" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Age" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MemberName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastLoginTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LatestMemberTopicReplys" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsHot" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="IsTop" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="IsEssence" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="FIssueTime" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dt_ProductReplyView" Member="dt_ProductReplyView">
+    <Type Name="dt_ProductReplyView">
+      <Column Name="ReplyId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="Context" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="IsSysReply" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dt_ProductInterview" Member="dt_ProductInterview">
+    <Type Name="dt_ProductInterview">
+      <Column Name="InterviewId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="OrderNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SolutionId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="InterviewTarget" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OrderTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OrderPlace" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ContactTel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Manager" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ManagerMob" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Context" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ProductId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="TargetName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Age" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Revenue" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Company" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ProvinceName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CityName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AreaName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MemberName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="InterviewNote" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Target" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Advantage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OtherInfo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RelatedFile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProductInterviewNote" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dt_NewsReply" Member="dt_NewsReply">
+    <Type Name="dt_NewsReply">
+      <Column Name="ReplyId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="NewsId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="Context" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NickName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HeadPhoto" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ProductInterview" Member="tbl_ProductInterview">
+    <Type Name="tbl_ProductInterview">
+      <Column Name="InterviewId" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OrderNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SolutionId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="InterviewTarget" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OrderTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OrderPlace" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ContactTel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Manager" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ManagerMob" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Context" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="InterviewNote" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_ProductSolution_tbl_ProductInterview" Member="tbl_ProductSolution" ThisKey="SolutionId" OtherKey="SolutionId" Type="tbl_ProductSolution" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Member" Member="tbl_Member">
+    <Type Name="tbl_Member">
+      <Column Name="MemberId" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CountryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProvinceId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProvinceName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CityId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CityName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AreaId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AreaName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NickName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HeadPhoto" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Age" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Revenue" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Requirement" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MemberName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastLoginTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsPush" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="userid" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="channelid" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="qqsocialid" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="weibosocialid" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="tbl_Member_MemberCollect" Member="MemberCollect" ThisKey="MemberId" OtherKey="MemberId" Type="MemberCollect" />
+      <Association Name="tbl_Member_tbl_MemberTopic" Member="tbl_MemberTopic" ThisKey="MemberId" OtherKey="MemberId" Type="tbl_MemberTopic" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_SysMessageReply" Member="tbl_SysMessageReply">
+    <Type Name="tbl_SysMessageReply">
+      <Column Name="ReplyId" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SendId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MessageId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="Context" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsSysReply" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="OperatorId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_SysMessage_tbl_SysMessageReply" Member="tbl_SysMessage" ThisKey="MessageId" OtherKey="MessageId" Type="tbl_SysMessage" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dt_MemberCollect" Member="dt_MemberCollect">
+    <Type Name="dt_MemberCollect">
+      <Column Name="CollectId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="RelatedType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="RelatedId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="RelatedName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Collects" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dt_ProductConsult" Member="dt_ProductConsult">
+    <Type Name="dt_ProductConsult">
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ProductId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsSysReply" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dt_Top10" Member="dt_Top10">
+    <Type Name="dt_Top10">
+      <Column Name="T" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TopicId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="HeadPhoto" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="IsHot" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="IsTop" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="IsEssence" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ProductSolution" Member="tbl_ProductSolution">
+    <Type Name="tbl_ProductSolution">
+      <Column Name="SolutionId" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="TargetName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Age" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Revenue" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_ProductSolution_tbl_ProductInterview" Member="tbl_ProductInterview" ThisKey="SolutionId" OtherKey="SolutionId" Type="tbl_ProductInterview" />
+      <Association Name="tbl_Product_tbl_ProductSolution" Member="tbl_Product" ThisKey="ProductId" OtherKey="ProductId" Type="tbl_Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dt_ProductSolution" Member="dt_ProductSolution">
+    <Type Name="dt_ProductSolution">
+      <Column Name="SolutionId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="TargetName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Age" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Revenue" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TypeId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Company" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Target" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Advantage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OtherInfo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RelatedFile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="InterviewNote" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Collects" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProvinceName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CityName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AreaName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NickName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MemberName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FIssueTime" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="State" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dt_MemberTopicReply" Member="dt_MemberTopicReply">
+    <Type Name="dt_MemberTopicReply">
+      <Column Name="ReplyId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="TopicId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="Context" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NickName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HeadPhoto" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dt_ProductReply" Member="dt_ProductReply">
+    <Type Name="dt_ProductReply">
+      <Column Name="ReplyId" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="MemberId" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="Context" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IssueTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsRead" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="HeadPhoto" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="FIssueTime" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="IsSysReply" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.esp_EventLog_ADD" Method="esp_EventLog_ADD">
+    <Parameter Name="Id" Parameter="id" Type="System.String" DbType="Char(36)" />
+    <Parameter Name="TypeId" Parameter="typeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="OperatorId" Parameter="operatorId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="OperatorName" Parameter="operatorName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EventTitle" Parameter="eventTitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="EventInfo" Parameter="eventInfo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Ip" Parameter="ip" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="IssueTime" Parameter="issueTime" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.esp_UserRole_Update" Method="esp_UserRole_Update">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RoleName" Parameter="roleName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PerList" Parameter="perList" Type="System.String" DbType="NVarChar(3000)" />
+    <Parameter Name="Remark" Parameter="remark" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.esp_MemberInterest_Update" Method="esp_MemberInterest_Update">
+    <Parameter Name="MemberId" Parameter="memberId" Type="System.String" DbType="Char(36)" />
+    <Parameter Name="CSWZ" Parameter="cSWZ" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="CYQYH" Parameter="cYQYH" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="CYZBPP" Parameter="cYZBPP" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="MZTQS" Parameter="mZTQS" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="GZQD" Parameter="gZQD" Type="System.String" DbType="NVarChar(250)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.esp_MatchField_ADD" Method="esp_MatchField_ADD">
+    <Parameter Name="Id" Parameter="id" Type="System.String" DbType="Char(36)" />
+    <Parameter Name="MatchId" Parameter="matchId" Type="System.String" DbType="Char(36)" />
+    <Parameter Name="FieldId" Parameter="fieldId" Type="System.String" DbType="Char(36)" />
+    <Parameter Name="TeamNumber" Parameter="teamNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

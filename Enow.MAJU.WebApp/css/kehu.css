@@ -1,0 +1,11 @@
+.kehu_list li s.ico_fankui{ background-position:-67px -179px;}
+.kehu_list li s.ico_weixin{ background-position:-67px -232px;}
+.kehu_list li s.ico_qq{ background-position:-67px -286px;}
+.kehu_list li s.ico_weibo{ background-position:-67px -340px;width:21px;}
+.kehu_list li s.ico_email{ background-position:-67px -394px;width:19px;}
+
+.kehu_list li{ padding-left:130px;}
+.kehu_list li .label_name{padding-left:40px;}
+
+.about_box{ background:#fff;overflow:hidden; text-align:center;width:100%; height:auto;}
+.about_box img{width:100%; height:auto; vertical-align:top;}

@@ -1,0 +1,53 @@
+.slider_box{width:100%; height:100%;  position:relative;}
+
+.slider{
+	position:relative;
+}
+.slider>div{
+	width:10000px;
+	overflow:hidden;
+}
+.slider ul{
+	width:100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.slider ul li{
+	float:left;
+}
+.slider ul li a{
+	display: block;
+}
+.slider ul li img{
+	width:100%;
+	height:auto;
+	vertical-align:top;
+}
+
+.slider ol{
+	position: absolute;
+	z-index: 1000;
+	bottom:5px;
+	width:100%;
+	text-align: right;
+	pointer-events:none;
+	padding-right:10px;
+	box-sizing:border-box;
+}
+.slider ol li{
+	display: inline-block;
+	width:5px; height:5px;margin-right:3px;background:#b1b1b1;z-index:9999;}
+.slider ol li.on{background:#fff;}
+
+.banner_txt{ position:absolute; left:0; bottom:0;width:100%; padding-right:105px; padding-left:10px;box-sizing:border-box; height:40px; line-height:40px; background:#000; opacity:0.6; color:#fff; font-size:16px; z-index:999;}
+
+
+@media screen and (max-width:360px){
+.banner_txt{font-size:13px;}
+	}
+
+.zixun_list{ margin-bottom:20px;}
+.zixun_list li{ border-bottom:#d6d6d6 solid 1px; padding:10px 20px; overflow:hidden;}
+.zixun_list li dt{font-size:18px; height:27px; overflow:hidden;}
+.zixun_list li dd{ font-size:16px; overflow:hidden; color:#7c7c7c; padding-top:10px;}
+.zixun_list li dd.cont{height:96px;}

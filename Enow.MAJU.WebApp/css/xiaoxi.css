@@ -1,0 +1,14 @@
+.baoxian_box{ padding:20px; overflow:hidden;}
+.baoxian_box .head_img img{ width:73px; height:73px;}
+.zixun_box{width:100%; box-sizing:border-box; padding:10px; background:#fff;border:#d6d6d6 solid 1px; color:#414141; font-size:16px;}
+
+.baoxian_q{ position:relative; padding-left:72px; min-height:52px;padding-bottom:15px;}
+.baoxian_q .head_img{ width:52px; height:52px; position:absolute; left:0;top:0; overflow:hidden;}
+.baoxian_q .head_img img,.baoxian_a .head_img img{ width:52px; height:52px;}
+
+.baoxian_q i:before{border-top:#d6d6d6 solid 1px; border-left:#d6d6d6 solid 1px; content:""; width:8px; height:8px; position:absolute; left:67px;top:13px;-webkit-transform:rotate(-45deg); -moz-transform:rotate(-45deg); -ms-transform:rotate(-45deg); transform:rotate(-45deg); background:#fff;}
+
+.baoxian_a{ position:relative; padding-right:72px; min-height:52px;padding-bottom:15px;}
+.baoxian_a .head_img{ width:52px; height:52px; position:absolute; right:0;top:0; overflow:hidden;}
+
+.baoxian_a i:after{border-top:#d6d6d6 solid 1px; border-right:#d6d6d6 solid 1px; content:""; width:8px; height:8px; position:absolute; right:67px;top:13px;-webkit-transform:rotate(45deg); -moz-transform:rotate(45deg); -ms-transform:rotate(45deg); transform:rotate(45deg); background:#fff;}

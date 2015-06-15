@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="C#" CodeBehind="GetSubMenu.ashx.cs" Class="Enow.MAJU.Web.Ashx.GetSubMenu" %>

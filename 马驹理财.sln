@@ -1,0 +1,110 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enow.MAJU.Document", "Enow.MAJU.Document\Enow.MAJU.Document.csproj", "{50B934A4-1AC8-4F28-8D4C-7CF6F2805A26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enow.MAJU.BLL", "Enow.MAJU.BLL\Enow.MAJU.BLL.csproj", "{3119CCBD-64C3-4F10-B954-04C9AB6F23B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enow.MAJU.Model", "Enow.MAJU.Model\Enow.MAJU.Model.csproj", "{35DBA4DE-4CF7-436B-8F60-6F664F318402}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enow.MAJU.Web", "Enow.MAJU.Web\Enow.MAJU.Web.csproj", "{F8520CB2-DADB-4E3F-B383-237AC99CAB3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enow.MAJU.SMS", "Enow.MAJU.SMS\Enow.MAJU.SMS.csproj", "{4E3FB278-8FA0-404C-A702-0B55883AACC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICSharpCode.SharpZLib", "ICSharpCode.SharpZLib\ICSharpCode.SharpZLib.csproj", "{0E7413FF-EB9E-4714-ACF2-BE3A6A7B2FFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enow.MAJU.Utility", "Enow.MAJU.Utility\Enow.MAJU.Utility.csproj", "{67A8DB4B-7746-4DD6-A3D0-CD09A378E24F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enow.MAJU.WebApp", "Enow.MAJU.WebApp\Enow.MAJU.WebApp.csproj", "{B3FCF2A8-BD7A-4BB5-A76C-F4CBA08E185B}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 9
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Enow.MAJU.BLL\\Enow.MAJU.BLL.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = Enow.MAJU.BLL\\
+		SccProjectUniqueName2 = Enow.MAJU.Document\\Enow.MAJU.Document.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = Enow.MAJU.Document\\
+		SccProjectUniqueName3 = Enow.MAJU.Model\\Enow.MAJU.Model.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = Enow.MAJU.Model\\
+		SccProjectUniqueName4 = Enow.MAJU.SMS\\Enow.MAJU.SMS.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = Enow.MAJU.SMS\\
+		SccProjectUniqueName5 = Enow.MAJU.Utility\\Enow.MAJU.Utility.csproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = Enow.MAJU.Utility\\
+		SccProjectUniqueName6 = Enow.MAJU.Web\\Enow.MAJU.Web.csproj
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = Enow.MAJU.Web\\
+		SccProjectUniqueName7 = ICSharpCode.SharpZLib\\ICSharpCode.SharpZLib.csproj
+		SccLocalPath7 = .
+		SccProjectFilePathRelativizedFromConnection7 = ICSharpCode.SharpZLib\\
+		SccProjectUniqueName8 = Enow.MAJU.WebApp\\Enow.MAJU.WebApp.csproj
+		SccLocalPath8 = .
+		SccProjectFilePathRelativizedFromConnection8 = Enow.MAJU.WebApp\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50B934A4-1AC8-4F28-8D4C-7CF6F2805A26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B934A4-1AC8-4F28-8D4C-7CF6F2805A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B934A4-1AC8-4F28-8D4C-7CF6F2805A26}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{50B934A4-1AC8-4F28-8D4C-7CF6F2805A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B934A4-1AC8-4F28-8D4C-7CF6F2805A26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50B934A4-1AC8-4F28-8D4C-7CF6F2805A26}.Release|x64.ActiveCfg = Release|Any CPU
+		{3119CCBD-64C3-4F10-B954-04C9AB6F23B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3119CCBD-64C3-4F10-B954-04C9AB6F23B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3119CCBD-64C3-4F10-B954-04C9AB6F23B4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3119CCBD-64C3-4F10-B954-04C9AB6F23B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3119CCBD-64C3-4F10-B954-04C9AB6F23B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3119CCBD-64C3-4F10-B954-04C9AB6F23B4}.Release|x64.ActiveCfg = Release|Any CPU
+		{35DBA4DE-4CF7-436B-8F60-6F664F318402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35DBA4DE-4CF7-436B-8F60-6F664F318402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35DBA4DE-4CF7-436B-8F60-6F664F318402}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{35DBA4DE-4CF7-436B-8F60-6F664F318402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35DBA4DE-4CF7-436B-8F60-6F664F318402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35DBA4DE-4CF7-436B-8F60-6F664F318402}.Release|x64.ActiveCfg = Release|Any CPU
+		{F8520CB2-DADB-4E3F-B383-237AC99CAB3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8520CB2-DADB-4E3F-B383-237AC99CAB3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8520CB2-DADB-4E3F-B383-237AC99CAB3D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F8520CB2-DADB-4E3F-B383-237AC99CAB3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8520CB2-DADB-4E3F-B383-237AC99CAB3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8520CB2-DADB-4E3F-B383-237AC99CAB3D}.Release|x64.ActiveCfg = Release|Any CPU
+		{4E3FB278-8FA0-404C-A702-0B55883AACC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E3FB278-8FA0-404C-A702-0B55883AACC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E3FB278-8FA0-404C-A702-0B55883AACC4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4E3FB278-8FA0-404C-A702-0B55883AACC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E3FB278-8FA0-404C-A702-0B55883AACC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E3FB278-8FA0-404C-A702-0B55883AACC4}.Release|x64.ActiveCfg = Release|Any CPU
+		{0E7413FF-EB9E-4714-ACF2-BE3A6A7B2FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E7413FF-EB9E-4714-ACF2-BE3A6A7B2FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E7413FF-EB9E-4714-ACF2-BE3A6A7B2FFD}.Debug|x64.ActiveCfg = Debug|x64
+		{0E7413FF-EB9E-4714-ACF2-BE3A6A7B2FFD}.Debug|x64.Build.0 = Debug|x64
+		{0E7413FF-EB9E-4714-ACF2-BE3A6A7B2FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E7413FF-EB9E-4714-ACF2-BE3A6A7B2FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E7413FF-EB9E-4714-ACF2-BE3A6A7B2FFD}.Release|x64.ActiveCfg = Release|x64
+		{0E7413FF-EB9E-4714-ACF2-BE3A6A7B2FFD}.Release|x64.Build.0 = Release|x64
+		{67A8DB4B-7746-4DD6-A3D0-CD09A378E24F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A8DB4B-7746-4DD6-A3D0-CD09A378E24F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A8DB4B-7746-4DD6-A3D0-CD09A378E24F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{67A8DB4B-7746-4DD6-A3D0-CD09A378E24F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A8DB4B-7746-4DD6-A3D0-CD09A378E24F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67A8DB4B-7746-4DD6-A3D0-CD09A378E24F}.Release|x64.ActiveCfg = Release|Any CPU
+		{B3FCF2A8-BD7A-4BB5-A76C-F4CBA08E185B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3FCF2A8-BD7A-4BB5-A76C-F4CBA08E185B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3FCF2A8-BD7A-4BB5-A76C-F4CBA08E185B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B3FCF2A8-BD7A-4BB5-A76C-F4CBA08E185B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3FCF2A8-BD7A-4BB5-A76C-F4CBA08E185B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3FCF2A8-BD7A-4BB5-A76C-F4CBA08E185B}.Release|x64.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
